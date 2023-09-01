@@ -1,5 +1,5 @@
 
-		//DEIXA A DIV GAME ESCONDIDA
+		
 		window.onload =	function() { document.getElementById('game').style.visibility = 'hidden' };
 		
 		function Jogador(nome, forma) {
@@ -8,12 +8,12 @@
 		}
 		
 		var jogador1, jogador2;
-		//Jogador da rodada
+		//next round
 		var jogadorAtual;
 		var formas = ['X', 'O'];
 		var index = null;
 
-		/*
+		/* This how the game is gonna look like/
 			0 1 2
 			3 4 5
 			6 7 8
@@ -22,7 +22,7 @@
 
 
 		 function initGame() {
-            console.log("Estou dentro da funcao")
+            console.log()
 			var nomeJogador1 = document.getElementById('jogador1').value;
 			var nomeJogador2 = document.getElementById('jogador2').value;
 			jogador1 = new Jogador(nomeJogador1, 0); //X
@@ -36,7 +36,7 @@
 			
 		}
 
-		/*Reinicia a partida*/
+		/*Restart the play*/
 
         reset = function() { window.location.reload(); }
 		
