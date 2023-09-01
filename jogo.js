@@ -45,7 +45,6 @@
 			document.getElementById('jogadorAtual').innerHTML = 'Jogador atual:  ' + jogadorAtual.nome;
 		}
 
-		/*Verifica se o tabuleiro está completamente preenchido, se estiver, significa que ninguém venceu a rodada*/
 		tabuleiroIsFilled = function() {
 			var preenchidos = 0;
 				for(var i = 0; i < tabuleiro.length; i++)
@@ -54,7 +53,7 @@
 				return preenchidos == tabuleiro.length;
 		}
 
-		/*Verifica a existência de ocorrências de um mesmo elemento(X ou O) nas linhas do tabuleiro, procurando um vencedor*/
+	
 		allElementsInSomeLine = function() {
 			for( var i = 0; i < 7; i += 3) {
 				if ( tabuleiro[i] == 'X' && tabuleiro[i + 1] == 'X' && tabuleiro[i + 2] == 'X' ) { 
@@ -68,7 +67,7 @@
 			}
 		}
 
-		/*Verifica a existência de ocorrências de um mesmo elemento(X ou O) nas colunas do tabuleiro, procurando um vencedor*/
+		
 		allElementsInSomeColumn = function() {
 			for( var i = 0; i < 3; i++) {
 				if ( tabuleiro[i] == 'X' && tabuleiro[i + 3] == 'X' && tabuleiro[i + 6] == 'X' ) { 
@@ -83,7 +82,7 @@
 
 		}
 
-		/*Verifica a existência de ocorrências de um mesmo elemento(X ou O) nas diagonais do tabuleiro, procurando um vencedor*/
+		
 		allElementsInSomeDiagonal = function() {
 			if ( (tabuleiro[0] == 'X' && tabuleiro[4] == 'X' && tabuleiro[8] == 'X') ||
 	 			 (tabuleiro[2] == 'X' && tabuleiro[4] == 'X' && tabuleiro[6] == 'X')) {
@@ -96,8 +95,7 @@
 			} 
 		}
 
-		/*Preenche a célula da tabela HTML escolhida pelo usuário ao clicar, além de cuidar do jogador atual da rodada e chamar as funções
-		  de verificação de algum ganhador */
+		
 		setOnCeil = function(cel, pos) { 
 				if(tabuleiro[pos] == undefined) {
 					cel.innerHTML = formas[jogadorAtual.forma];
